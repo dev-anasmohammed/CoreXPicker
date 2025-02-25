@@ -14,6 +14,9 @@ and another types ) from storage without permission.
 
 ## General Usage
 
+Full Usage of the library
+<br/>
+
 ```kotlin
     CoreXPicker.init(activity)
        .setType(PickerType.Gallery.SinglePhoto)
