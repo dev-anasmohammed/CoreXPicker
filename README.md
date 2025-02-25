@@ -13,11 +13,12 @@ and another types ) from storage without permission.
 
 ## Gallery Picker
 
-``` 
-CoreXPicker.init(activity)
-.setType(PickerType.Gallery.SinglePhoto)
-.pick(object : OnMediaPickedCallback {
-override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+```kotlin
+    CoreXPicker.init(activity)
+        .setType(PickerType.Gallery.SinglePhoto)
+        .pick(object : OnMediaPickedCallback {
+            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
             }
         })
 
