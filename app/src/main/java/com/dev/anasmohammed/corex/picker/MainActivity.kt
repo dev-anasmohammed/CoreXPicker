@@ -8,6 +8,7 @@ import com.dev.anasmohammed.corex.corexpicker.R
 import com.dev.anasmohammed.corex.picker.core.CoreXPicker
 import com.dev.anasmohammed.corex.picker.core.callback.OnCameraCapturedCallback
 import com.dev.anasmohammed.corex.picker.core.callback.OnMediaPickedCallback
+import com.dev.anasmohammed.corex.picker.core.enums.MimeType
 import com.dev.anasmohammed.corex.picker.core.enums.PickerType
 
 class MainActivity : AppCompatActivity() {
@@ -19,26 +20,29 @@ class MainActivity : AppCompatActivity() {
 
 private fun useOfGallery(activity: AppCompatActivity) {
     CoreXPicker.init(activity)
-        .setType(PickerType.Gallery.SinglePhoto)
-        .pick(object : OnMediaPickedCallback {
-            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
-
+        .setType(PickerType.Camera.Photo)
+        .setType(PickerType.Camera.Video)
+        .pick(object : OnCameraCapturedCallback {
+            override fun onCameraCaptured(bitmap: Bitmap?) {
+                super.onCameraCaptured(bitmap)
             }
 
-            override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
-                super.onExceedMaxLimit(maxLimit, isExceed)
-                // handle if the photos exceed the limit that developer specify
-                // This used special to handle Huawei devices as limit not work for device that
-                // didn't support google play services
+            override fun onVideoCaptured(uri: Uri?) {
+                super.onVideoCaptured(uri)
             }
         })
-//        .pick(object : OnCameraCapturedCallback{
-//            override fun onCameraCaptured(bitmap: Bitmap?) {
-//                super.onCameraCaptured(bitmap)
+
+
+//        .pick(object : OnMediaPickedCallback {
+//            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+//
 //            }
 //
-//            override fun onVideoCaptured(uri: Uri?) {
-//                super.onVideoCaptured(uri)
+//            override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
+//                super.onExceedMaxLimit(maxLimit, isExceed)
+//                // handle if the photos exceed the limit that developer specify
+//                // This used special to handle Huawei devices as limit not work for device that
+//                // didn't support google play services
 //            }
 //        })
 }

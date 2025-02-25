@@ -19,18 +19,19 @@ Full Usage of the library
 
 ```kotlin
     CoreXPicker.init(activity)
-       .setType(PickerType.Gallery.SinglePhoto)
-       .pick(object : OnMediaPickedCallback {
-            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+    .setType(PickerType.Gallery.SinglePhoto)
+    .pick(object : OnMediaPickedCallback {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
         }
     })
 ```
 
-1- Set the picker type you want to set 
+1- Set the picker type you want to set
 <br/>
 <br/>
 .setType(PickerType.[PickerYouWant].[Operation])
+
 ```kotlin
     .setType(PickerType.Gallery.SinglePhoto)
     .setType(PickerType.GooglePhotoPicker.MultiPhotos(10))
@@ -40,24 +41,27 @@ Full Usage of the library
 2- Handle the callback of picking
 <br/>
 <br/> [For All Pickers]
+
 ```kotlin
     .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+    override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-        }
-    })
+    }
+})
 ```
-[For Camera Picker]
-```kotlin
-     .pick(object : OnCameraCapturedCallback{
-         override fun onCameraCaptured(bitmap: Bitmap?) {
-            super.onCameraCaptured(bitmap)
-          }
 
-         override fun onVideoCaptured(uri: Uri?) {
-            super.onVideoCaptured(uri)
-         }
-     })
+[For Camera Picker]
+
+```kotlin
+     .pick(object : OnCameraCapturedCallback {
+    override fun onCameraCaptured(bitmap: Bitmap?) {
+        super.onCameraCaptured(bitmap)
+    }
+
+    override fun onVideoCaptured(uri: Uri?) {
+        super.onVideoCaptured(uri)
+    }
+})
 ```
 
 ## Gallery Picker
@@ -74,6 +78,7 @@ Full Usage of the library
 
 All Operations on Gallery Picker
 <br/>
+
 ```kotlin
     .setType(PickerType.Gallery.SinglePhoto)
     .setType(PickerType.Gallery.SingleVideo)
@@ -87,90 +92,62 @@ All Operations on Gallery Picker
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.GooglePhotoPicker.SinglePhoto)
     .pick(object : OnMediaPickedCallback {
         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
         }
+
+        override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
+            super.onExceedMaxLimit(maxLimit, isExceed)
+            // handle if the photos exceed the limit that developer specify
+            // This used special to handle Huawei devices as limit not work for device that
+            // didn't support google play services
+        }
     })
 ```
 
-All Operations on Gallery Picker
+All Operations on Google Photo Picker
 <br/>
+
 ```kotlin
-    .setType(PickerType.Gallery.SinglePhoto)
-    .setType(PickerType.Gallery.SingleVideo)
-    .setType(PickerType.Gallery.SinglePhotoOrVideo)
-    .setType(PickerType.Gallery.MultiPhotos)
-    .setType(PickerType.Gallery.MultiVideos)
-    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+    .setType(PickerType.GooglePhotoPicker.SinglePhoto)
+    .setType(PickerType.GooglePhotoPicker.SingleVideo)
+    .setType(PickerType.GooglePhotoPicker.SinglePhotoOrVideo)
+    .setType(PickerType.GooglePhotoPicker.MultiPhotos(3))
+    .setType(PickerType.GooglePhotoPicker.MultiVideos(4))
+    .setType(PickerType.GooglePhotoPicker.MultiPhotosAndVideos(4))
+    .setType(PickerType.GooglePhotoPicker.CustomMimeType(MimeType.GIF))
+    .setType(PickerType.GooglePhotoPicker.CustomMimeType("*/*"))
 ```
 
 ## Camera Picker
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+    .setType(PickerType.Camera.Photo)
+    .pick(object : OnCameraCapturedCallback {
+        override fun onCameraCaptured(bitmap: Bitmap?) {
+            super.onCameraCaptured(bitmap)
+
+        }
+
+        override fun onVideoCaptured(uri: Uri?) {
+            super.onVideoCaptured(uri)
 
         }
     })
 ```
 
-All Operations on Gallery Picker
+All Operations on Google Photo Picker
 <br/>
+
 ```kotlin
-    .setType(PickerType.Gallery.SinglePhoto)
-    .setType(PickerType.Gallery.SingleVideo)
-    .setType(PickerType.Gallery.SinglePhotoOrVideo)
-    .setType(PickerType.Gallery.MultiPhotos)
-    .setType(PickerType.Gallery.MultiVideos)
-    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+    .setType(PickerType.Camera.Photo)
+    .setType(PickerType.Camera.Video)
 ```
 
 ## Audio Picker
 
-```kotlin
-    CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
-
-        }
-    })
-```
-
-All Operations on Gallery Picker
-<br/>
-```kotlin
-    .setType(PickerType.Gallery.SinglePhoto)
-    .setType(PickerType.Gallery.SingleVideo)
-    .setType(PickerType.Gallery.SinglePhotoOrVideo)
-    .setType(PickerType.Gallery.MultiPhotos)
-    .setType(PickerType.Gallery.MultiVideos)
-    .setType(PickerType.Gallery.MultiPhotosAndVideos)
-```
-
 ## Document Picker
 
-```kotlin
-    CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
-
-        }
-    })
-```
-
-All Operations on Gallery Picker
-<br/>
-```kotlin
-    .setType(PickerType.Gallery.SinglePhoto)
-    .setType(PickerType.Gallery.SingleVideo)
-    .setType(PickerType.Gallery.SinglePhotoOrVideo)
-    .setType(PickerType.Gallery.MultiPhotos)
-    .setType(PickerType.Gallery.MultiVideos)
-    .setType(PickerType.Gallery.MultiPhotosAndVideos)
-```
