@@ -26,6 +26,7 @@ and another types ) from storage without permission.
 
 1- Set the picker type you want to set 
 <br/>
+<br/>
 .setType(PickerType.[PickerYouWant].[Operation])
 ```kotlin
     .setType(PickerType.Gallery.SinglePhoto)
@@ -34,6 +35,7 @@ and another types ) from storage without permission.
 ```
 
 2- Handle the callback of picking
+<br/>
 <br/> [For All Pickers]
 ```kotlin
     .pick(object : OnMediaPickedCallback {
