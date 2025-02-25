@@ -30,7 +30,7 @@ and another types ) from storage without permission.
 ```
 
 2- Handle the callback of picking
-</br>[For All Pickers]
+<br/> [For All Pickers]
 ```kotlin
     .pick(object : OnMediaPickedCallback {
         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
