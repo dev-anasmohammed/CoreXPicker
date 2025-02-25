@@ -44,7 +44,7 @@ class CameraPicker : Picker {
                             it, "data", Bitmap::class.java
                         )
                     }
-                    onCameraCapturedCallback?.onCameraCaptured(bitmap)
+                    onCameraCapturedCallback?.onPhotoCaptured(bitmap)
                 }
 
                 PickerType.Camera.Video -> {

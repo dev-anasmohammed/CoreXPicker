@@ -14,7 +14,7 @@ interface OnCameraCapturedCallback {
      *
      * @param bitmap A bitmap indicating the captured photo from camera app.
      */
-    fun onCameraCaptured(bitmap: Bitmap?) {}
+    fun onPhotoCaptured(bitmap: Bitmap?) {}
 
     /**
      * Called when picking from [Camera.Video] by using [CameraPicker].

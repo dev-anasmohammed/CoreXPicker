@@ -54,8 +54,8 @@ Full Usage of the library
 
 ```kotlin
      .pick(object : OnCameraCapturedCallback {
-    override fun onCameraCaptured(bitmap: Bitmap?) {
-        super.onCameraCaptured(bitmap)
+    override fun onPhotoCaptured(bitmap: Bitmap?) {
+        super.onPhotoCaptured(bitmap)
     }
 
     override fun onVideoCaptured(uri: Uri?) {
@@ -127,8 +127,8 @@ All Operations on Google Photo Picker
     CoreXPicker.init(activity)
       .setType(PickerType.Camera.Photo)
       .pick(object : OnCameraCapturedCallback {
-         override fun onCameraCaptured(bitmap: Bitmap?) {
-             super.onCameraCaptured(bitmap)
+         override fun onPhotoCaptured(bitmap: Bitmap?) {
+             super.onPhotoCaptured(bitmap)
 
          }
 
