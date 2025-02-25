@@ -183,19 +183,20 @@ All Operations on Audio Picker
       })
 ```
 
-All Operations on Audio Picker
+All Operations on Document Picker
 <br/>
 
 ```kotlin
     .setType(PickerType.Document.All(isMultiPick = true))
     .setType(PickerType.Document.Pdf(isMultiPick = true))
-    .setType(PickerType.Document.Apk(isMultiPick = true))
-    .setType(PickerType.Document.Zip(isMultiPick = true))
-    .setType(PickerType.Document.Ebooks(isMultiPick = true))
     .setType(PickerType.Document.Word(isMultiPick = true))
     .setType(PickerType.Document.WordXMl(isMultiPick = true))
     .setType(PickerType.Document.Excel(isMultiPick = true))
     .setType(PickerType.Document.ExcelXml(isMultiPick = true))
     .setType(PickerType.Document.PowerPoint(isMultiPick = true))
     .setType(PickerType.Document.PowerPointXml(isMultiPick = true))
+    .setType(PickerType.Document.Apk(isMultiPick = true))
+    .setType(PickerType.Document.Zip(isMultiPick = true))
+    .setType(PickerType.Document.Ebooks(isMultiPick = true))
+    .setType(PickerType.Document.Ebooks(isMultiPick = true))
 ```
