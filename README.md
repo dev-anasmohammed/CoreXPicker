@@ -199,4 +199,5 @@ All Operations on Document Picker
     .setType(PickerType.Document.Zip(isMultiPick = true))
     .setType(PickerType.Document.Ebooks(isMultiPick = true))
     .setType(PickerType.Document.Ebooks(isMultiPick = true))
+    .setType(PickerType.Document.Json(isMultiPick = true))
 ```
