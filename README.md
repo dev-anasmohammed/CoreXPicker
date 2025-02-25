@@ -44,7 +44,7 @@ Full Usage of the library
     .pick(object : OnMediaPickedCallback {
         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-    }
+        }
     })
 ```
 [For Camera Picker]
