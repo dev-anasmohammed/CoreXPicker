@@ -5,7 +5,7 @@ and another types ) from storage without permission.
 
 ### Available Pickers:
 
-[00 General Usage](#general-usage)
+[00 General Usage](#general-usage)<br/>
 [01 Gallery Picker (Photo & Videos)](#gallery-picker)<br/>
 [02 Google Photo Picker (Photo & Videos)](#google-photo-picker)<br/>
 [03 Camera Picker (Photo & Videos)](#camera-picker)<br/>
