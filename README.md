@@ -125,21 +125,21 @@ All Operations on Google Photo Picker
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Camera.Photo)
-    .pick(object : OnCameraCapturedCallback {
-        override fun onCameraCaptured(bitmap: Bitmap?) {
-            super.onCameraCaptured(bitmap)
+      .setType(PickerType.Camera.Photo)
+      .pick(object : OnCameraCapturedCallback {
+         override fun onCameraCaptured(bitmap: Bitmap?) {
+             super.onCameraCaptured(bitmap)
 
-        }
+         }
 
-        override fun onVideoCaptured(uri: Uri?) {
-            super.onVideoCaptured(uri)
+         override fun onVideoCaptured(uri: Uri?) {
+             super.onVideoCaptured(uri)
 
-        }
-    })
+         }
+      })
 ```
 
-All Operations on Google Photo Picker
+All Operations on Camera Picker
 <br/>
 
 ```kotlin
@@ -149,5 +149,53 @@ All Operations on Google Photo Picker
 
 ## Audio Picker
 
-## Document Picker
+```kotlin
+    CoreXPicker.init(activity)
+      .setType(PickerType.Audio())
+      .pick(object : OnMediaPickedCallback {
+         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
+         }
+      })
+```
+
+All Operations on Audio Picker
+<br/>
+
+```kotlin
+    .setType(PickerType.Audio())
+```
+
+## Document Picker
+```kotlin
+    CoreXPicker.init(activity)
+      .setType(PickerType.Document.All())
+      .pick(object : OnMediaPickedCallback {
+         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
+         }
+         override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
+              super.onExceedMaxLimit(maxLimit, isExceed)
+              // handle if the photos exceed the limit that developer specify
+              // This used special to handle Huawei devices as limit not work for device that
+              // didn't support google play services
+         }
+      })
+```
+
+All Operations on Audio Picker
+<br/>
+
+```kotlin
+    .setType(PickerType.Document.All(isMultiPick = true))
+    .setType(PickerType.Document.Pdf(isMultiPick = true))
+    .setType(PickerType.Document.Apk(isMultiPick = true))
+    .setType(PickerType.Document.Zip(isMultiPick = true))
+    .setType(PickerType.Document.Ebooks(isMultiPick = true))
+    .setType(PickerType.Document.Word(isMultiPick = true))
+    .setType(PickerType.Document.WordXMl(isMultiPick = true))
+    .setType(PickerType.Document.Excel(isMultiPick = true))
+    .setType(PickerType.Document.ExcelXml(isMultiPick = true))
+    .setType(PickerType.Document.PowerPoint(isMultiPick = true))
+    .setType(PickerType.Document.PowerPointXml(isMultiPick = true))
+```

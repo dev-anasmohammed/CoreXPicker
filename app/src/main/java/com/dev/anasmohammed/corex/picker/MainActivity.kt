@@ -20,29 +20,20 @@ class MainActivity : AppCompatActivity() {
 
 private fun useOfGallery(activity: AppCompatActivity) {
     CoreXPicker.init(activity)
-        .setType(PickerType.Camera.Photo)
-        .setType(PickerType.Camera.Video)
-        .pick(object : OnCameraCapturedCallback {
-            override fun onCameraCaptured(bitmap: Bitmap?) {
-                super.onCameraCaptured(bitmap)
-            }
+        .setType(PickerType.Document.All(isMultiPick = true))
+        .setType(PickerType.Document.Pdf(isMultiPick = true))
+        .setType(PickerType.Document.Apk(isMultiPick = true))
+        .setType(PickerType.Document.Zip(isMultiPick = true))
+        .setType(PickerType.Document.Ebooks(isMultiPick = true))
+        .setType(PickerType.Document.Word(isMultiPick = true))
+        .setType(PickerType.Document.WordXMl(isMultiPick = true))
+        .setType(PickerType.Document.Excel(isMultiPick = true))
+        .setType(PickerType.Document.ExcelXml(isMultiPick = true))
+        .setType(PickerType.Document.PowerPoint(isMultiPick = true))
+        .setType(PickerType.Document.PowerPointXml(isMultiPick = true))
+        .pick(object : OnMediaPickedCallback {
+            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-            override fun onVideoCaptured(uri: Uri?) {
-                super.onVideoCaptured(uri)
             }
         })
-
-
-//        .pick(object : OnMediaPickedCallback {
-//            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
-//
-//            }
-//
-//            override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
-//                super.onExceedMaxLimit(maxLimit, isExceed)
-//                // handle if the photos exceed the limit that developer specify
-//                // This used special to handle Huawei devices as limit not work for device that
-//                // didn't support google play services
-//            }
-//        })
 }
