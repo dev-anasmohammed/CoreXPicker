@@ -27,8 +27,9 @@ private fun useOfGallery(activity: AppCompatActivity) {
 
             override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
                 super.onExceedMaxLimit(maxLimit, isExceed)
-                //TODO handle if the photos exceed the limit of the developer specify
-                // This used special to handle Huawei
+                // handle if the photos exceed the limit that developer specify
+                // This used special to handle Huawei devices as limit not work for device that
+                // didn't support google play services
             }
         })
 //        .pick(object : OnCameraCapturedCallback{
