@@ -19,12 +19,12 @@ Full Usage of the library
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+      .setType(PickerType.Gallery.SinglePhoto)
+      .pick(object : OnMediaPickedCallback {
+         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-        }
-    })
+         }
+      })
 ```
 
 1- Set the picker type you want to set
@@ -44,35 +44,35 @@ Full Usage of the library
 
 ```kotlin
     .pick(object : OnMediaPickedCallback {
-    override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+       override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-    }
-})
+      }
+    })
 ```
 
 [For Camera Picker]
 
 ```kotlin
      .pick(object : OnCameraCapturedCallback {
-    override fun onPhotoCaptured(bitmap: Bitmap?) {
-        super.onPhotoCaptured(bitmap)
-    }
-
-    override fun onVideoCaptured(uri: Uri?) {
-        super.onVideoCaptured(uri)
-    }
-})
+        override fun onPhotoCaptured(bitmap: Bitmap?) {
+           super.onPhotoCaptured(bitmap)
+        }
+ 
+        override fun onVideoCaptured(uri: Uri?) {
+            super.onVideoCaptured(uri)
+        }
+     })
 ```
 
 ## Gallery Picker
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+     .setType(PickerType.Gallery.SinglePhoto)
+     .pick(object : OnMediaPickedCallback {
+         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
-        }
+         }
     })
 ```
 
@@ -92,8 +92,8 @@ All Operations on Gallery Picker
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.GooglePhotoPicker.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
+     .setType(PickerType.GooglePhotoPicker.SinglePhoto)
+     .pick(object : OnMediaPickedCallback {
         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
         }
