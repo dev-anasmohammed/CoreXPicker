@@ -20,23 +20,24 @@ class MainActivity : AppCompatActivity() {
 private fun useOfGallery(activity: AppCompatActivity) {
     CoreXPicker.init(activity)
         .setType(PickerType.Gallery.SinglePhoto)
-        .setType(PickerType.Gallery.SingleVideo)
-        .setType(PickerType.Gallery.SinglePhotoOrVideo)
-        .setType(PickerType.Gallery.MultiPhotos)
-        .setType(PickerType.Gallery.MultiVideos)
-        .setType(PickerType.Gallery.MultiPhotosAndVideos)
-//        .pick(object : OnMediaPickedCallback {
-//            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
-//
-//            }
-//        })
-        .pick(object : OnCameraCapturedCallback{
-            override fun onCameraCaptured(bitmap: Bitmap?) {
-                super.onCameraCaptured(bitmap)
+        .pick(object : OnMediaPickedCallback {
+            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
             }
 
-            override fun onVideoCaptured(uri: Uri?) {
-                super.onVideoCaptured(uri)
+            override fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {
+                super.onExceedMaxLimit(maxLimit, isExceed)
+                //TODO handle if the photos exceed the limit of the developer specify
+                // This used special to handle Huawei
             }
         })
+//        .pick(object : OnCameraCapturedCallback{
+//            override fun onCameraCaptured(bitmap: Bitmap?) {
+//                super.onCameraCaptured(bitmap)
+//            }
+//
+//            override fun onVideoCaptured(uri: Uri?) {
+//                super.onVideoCaptured(uri)
+//            }
+//        })
 }

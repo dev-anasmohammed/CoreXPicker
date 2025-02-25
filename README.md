@@ -42,8 +42,7 @@ and another types ) from storage without permission.
         override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
     }
-})
-
+    })
 ```
 [For Camera Picker]
 ```kotlin
@@ -83,8 +82,92 @@ All Operations on Gallery Picker
 
 ## Google Photo Picker
 
+```kotlin
+    CoreXPicker.init(activity)
+    .setType(PickerType.Gallery.SinglePhoto)
+    .pick(object : OnMediaPickedCallback {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
+        }
+    })
+```
+
+All Operations on Gallery Picker
+<br/>
+```kotlin
+    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.Gallery.SingleVideo)
+    .setType(PickerType.Gallery.SinglePhotoOrVideo)
+    .setType(PickerType.Gallery.MultiPhotos)
+    .setType(PickerType.Gallery.MultiVideos)
+    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+```
+
 ## Camera Picker
+
+```kotlin
+    CoreXPicker.init(activity)
+    .setType(PickerType.Gallery.SinglePhoto)
+    .pick(object : OnMediaPickedCallback {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
+        }
+    })
+```
+
+All Operations on Gallery Picker
+<br/>
+```kotlin
+    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.Gallery.SingleVideo)
+    .setType(PickerType.Gallery.SinglePhotoOrVideo)
+    .setType(PickerType.Gallery.MultiPhotos)
+    .setType(PickerType.Gallery.MultiVideos)
+    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+```
 
 ## Audio Picker
 
+```kotlin
+    CoreXPicker.init(activity)
+    .setType(PickerType.Gallery.SinglePhoto)
+    .pick(object : OnMediaPickedCallback {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
+        }
+    })
+```
+
+All Operations on Gallery Picker
+<br/>
+```kotlin
+    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.Gallery.SingleVideo)
+    .setType(PickerType.Gallery.SinglePhotoOrVideo)
+    .setType(PickerType.Gallery.MultiPhotos)
+    .setType(PickerType.Gallery.MultiVideos)
+    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+```
+
 ## Document Picker
+
+```kotlin
+    CoreXPicker.init(activity)
+    .setType(PickerType.Gallery.SinglePhoto)
+    .pick(object : OnMediaPickedCallback {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+
+        }
+    })
+```
+
+All Operations on Gallery Picker
+<br/>
+```kotlin
+    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.Gallery.SingleVideo)
+    .setType(PickerType.Gallery.SinglePhotoOrVideo)
+    .setType(PickerType.Gallery.MultiPhotos)
+    .setType(PickerType.Gallery.MultiVideos)
+    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+```
