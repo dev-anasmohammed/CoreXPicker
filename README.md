@@ -70,6 +70,17 @@ and another types ) from storage without permission.
     })
 ```
 
+All Operations on Gallery Picker
+<br/>
+```kotlin
+    .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.Gallery.SingleVideo)
+    .setType(PickerType.Gallery.SinglePhotoOrVideo)
+    .setType(PickerType.Gallery.MultiPhotos)
+    .setType(PickerType.Gallery.MultiVideos)
+    .setType(PickerType.Gallery.MultiPhotosAndVideos)
+```
+
 ## Google Photo Picker
 
 ## Camera Picker
