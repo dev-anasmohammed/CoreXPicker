@@ -1,6 +1,7 @@
 package com.dev.anasmohammed.corex.picker.core.callback
 
 import android.net.Uri
+import com.dev.anasmohammed.corex.picker.core.enums.PickerType
 
 /**
  * OnMediaPickedCallback is a callback interface for handling the result of a media picking operation.
@@ -16,13 +17,11 @@ interface OnMediaPickedCallback {
     fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>)
 
     /**
-     * Called when picking exceed the max limit under any condition.
+     * Called when picking exceed the max limit under any condition when use [PickerType.GooglePhotoPicker].
      * The cause of doing this method to handle Huawei devices when they exceed the max limit
      * of items picked.
      * @param maxLimit A integer indicating max limit of picking items.
      * @param isExceed A boolean indicating whether picked items exceed the limit or not.
      */
-    fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean)
-
-
+    fun onExceedMaxLimit(maxLimit: Int, isExceed: Boolean) {}
 }
