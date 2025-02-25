@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 private fun useOfGallery(activity: AppCompatActivity) {
     CoreXPicker.init(activity)
-        .setType(PickerType.Gallery.SinglePhoto)
+        .setType(PickerType.Document.All())
 //        .pick(object : OnMediaPickedCallback {
 //            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 //

@@ -25,8 +25,12 @@ and another types ) from storage without permission.
 ```
 
 1- Set the picker type you want to set 
+<br/>
+.setType(PickerType.[PickerYouWant].[Operation])
 ```kotlin
     .setType(PickerType.Gallery.SinglePhoto)
+    .setType(PickerType.GooglePhotoPicker.MultiPhotos(10))
+    .setType(PickerType.Document.All())
 ```
 
 2- Handle the callback of picking
