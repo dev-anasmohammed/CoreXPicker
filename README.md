@@ -16,9 +16,9 @@ and another types ) from storage without permission.
 
 ```kotlin
     CoreXPicker.init(activity)
-    .setType(PickerType.Gallery.SinglePhoto)
-    .pick(object : OnMediaPickedCallback {
-        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+       .setType(PickerType.Gallery.SinglePhoto)
+       .pick(object : OnMediaPickedCallback {
+            override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
         }
     })
