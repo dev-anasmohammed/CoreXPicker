@@ -29,15 +29,28 @@ and another types ) from storage without permission.
     .setType(PickerType.Gallery.SinglePhoto)
 ```
 
-2- Handle the callback of picking 
+2- Handle the callback of picking
+[For All Pickers]
 ```kotlin
     .pick(object : OnMediaPickedCallback {
-    override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
+        override fun onMediaPicked(isSuccess: Boolean, result: List<Uri?>) {
 
     }
 })
-```
 
+```
+[For Camera Picker]
+```kotlin
+     .pick(object : OnCameraCapturedCallback{
+         override fun onCameraCaptured(bitmap: Bitmap?) {
+            super.onCameraCaptured(bitmap)
+          }
+
+         override fun onVideoCaptured(uri: Uri?) {
+            super.onVideoCaptured(uri)
+         }
+     })
+```
 
 ## Gallery Picker
 
