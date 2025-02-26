@@ -2,6 +2,7 @@
 
 This library to handle picking media (Photos , Videos and Audio) file and Non Media files (Documents
 and another types ) from storage without permission.
+Only Camera picker need Camera permission and record audio permission if need you need to record video.
 
 ### Available Pickers:
 
