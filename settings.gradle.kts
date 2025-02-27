@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoreXPicker"
 include(":app")
- 
+include(":Picker")

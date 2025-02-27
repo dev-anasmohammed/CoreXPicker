@@ -44,4 +44,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("io.github.dev-anasmohammed:CoreXPicker:1.0.1")
 }
