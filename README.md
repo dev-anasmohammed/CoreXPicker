@@ -16,6 +16,13 @@ Only Camera picker need Camera permission and record audio permission if need yo
 [04 Audio Picker (Audio Files)](#audio-picker)<br/>
 [05 Document Picker (Non Media Files)](#document-picker)<br/>
 
+## Getting started
+
+This library is available on Maven Central, install it by adding the following dependency to your <b>build.gradle</b>:
+```gradle
+implementation("io.github.dev-anasmohammed:CoreXPicker:1.0.1")
+```
+
 ## General Usage
 
 Full Usage of the library
