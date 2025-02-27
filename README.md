@@ -4,6 +4,8 @@ This library to handle picking media (Photos , Videos and Audio) file and Non Me
 and another types ) from storage without permission.
 Only Camera picker need Camera permission and record audio permission if need you need to record video.
 
+  <img src="https://maven-badges.herokuapp.com/maven-central/io.github.dev-anasmohammed/library/badge.svg" height="22" valign="middle">&nbsp;&nbsp;
+
 ### Available Pickers:
 
 [00 General Usage](#general-usage)<br/>
