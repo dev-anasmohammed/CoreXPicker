@@ -4,7 +4,7 @@ This library to handle picking media (Photos , Videos and Audio) file and Non Me
 and another types ) from storage without permission.
 Only Camera picker need Camera permission and record audio permission if need you need to record video.
 
-  <img src="https://maven-badges.herokuapp.com/maven-central/io.github.dev-anasmohammed/corex.picker/badge.svg" height="22" valign="middle">&nbsp;&nbsp;
+  <img src="https://maven-badges.herokuapp.com/maven-central/io.github.dev-anasmohammed/CoreXPicker/badge.svg" height="22" valign="middle">&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/API-26%2B-brightgreen.svg?style=flat" height="22" valign="middle">&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" height="22" valign="middle">&nbsp;&nbsp;
 
