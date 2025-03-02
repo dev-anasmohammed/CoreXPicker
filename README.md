@@ -18,26 +18,6 @@ Only Camera picker need Camera permission and record audio permission if need yo
 
 ## Getting started
 
-```xml
-<dependency>
-    <groupId>io.github.dev-anasmohammed</groupId>
-    <artifactId>CoreXPicker</artifactId>
-    <version>1.0.1</version>
-</dependency>
-```
-```xml
-<repositories>
-    <repository>
-        <id>github</id>
-        <name>GitHub TobseF Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/TobseF/HelloMaven</url>
-        <releases><enabled>true</enabled></releases>
-        <snapshots><enabled>true</enabled></snapshots>
-    </repository>
-</repositories>
-```
-
-
 This library is available on Maven Central, install it by adding the following dependency to your <b>build.gradle</b>:
 ```gradle
 implementation("io.github.dev-anasmohammed:CoreXPicker:1.0.1")
